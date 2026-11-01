@@ -1,0 +1,2 @@
+run_art,source,minutes_replayed,bars,gap_min_before_run,skipped_min,new_trades,last_bar_art,secs,errors,gha_run
+2026-11-01 17:37:10 ART,binance,15,210,15,0,6,2026-11-01 17:36:00 ART,24.6,0,local

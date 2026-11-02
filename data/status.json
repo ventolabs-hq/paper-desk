@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-02 11:42:44 ART",
+ "updated_art": "2026-11-02 12:41:00 ART",
  "last_run": {
-  "run_art": "2026-11-02 11:42:36 ART",
+  "run_art": "2026-11-02 12:40:52 ART",
   "source": "binance",
-  "minutes_replayed": 61,
-  "bars": 854,
-  "gap_min_before_run": 61,
+  "minutes_replayed": 58,
+  "bars": 812,
+  "gap_min_before_run": 58,
   "skipped_min": 0,
-  "new_trades": 21,
-  "last_bar_art": "2026-11-02 11:41:00 ART",
-  "secs": 7.2,
+  "new_trades": 9,
+  "last_bar_art": "2026-11-02 12:39:00 ART",
+  "secs": 8.7,
   "errors": 0,
-  "gha_run": "41464498960"
+  "gha_run": "41473921444"
  },
  "symbols": [
   "BTCUSDT",
@@ -31,31 +31,38 @@
  ],
  "strategies": {
   "breakout": {
-   "equity": 95.2252,
-   "cash": 47.4366,
-   "realized": -4.9271,
-   "closed_trades": 49,
-   "wins": 9,
+   "equity": 94.7819,
+   "cash": 23.7128,
+   "realized": -4.9233,
+   "closed_trades": 51,
+   "wins": 10,
    "open_positions": {
     "ZECUSDT": {
      "qty": 0.0187983468865526,
      "entry": 1266.7330499999998,
      "stop": 1255.9032142857143,
      "tp": 1286.4935714285712,
-     "last": 1266.56
+     "last": 1261.6
+    },
+    "TRXUSDT": {
+     "qty": 74.34484444263008,
+     "entry": 0.3191595,
+     "stop": 0.3183142857142857,
+     "tp": 0.3203714285714286,
+     "last": 0.3195
     },
     "SPCXBUSDT": {
-     "qty": 0.17069619837973996,
-     "entry": 139.28960999999998,
-     "stop": 138.15178571428572,
-     "tp": 141.35642857142855,
-     "last": 140.48
+     "qty": 0.16715042152282805,
+     "entry": 142.101015,
+     "stop": 140.08642857142857,
+     "tp": 145.91714285714286,
+     "last": 141.19
     }
    }
   },
   "ema_cross_atr": {
-   "equity": 97.542,
-   "cash": 48.4552,
+   "equity": 97.2522,
+   "cash": -0.0,
    "realized": -2.2704,
    "closed_trades": 15,
    "wins": 2,
@@ -65,20 +72,34 @@
      "entry": 7.267632,
      "stop": 7.186714285714286,
      "tp": null,
-     "last": 7.265
+     "last": 7.26
     },
     "ZECUSDT": {
      "qty": 0.019328940897802654,
      "entry": 1273.2563099999998,
      "stop": 1255.8228571428572,
      "tp": null,
-     "last": 1266.56
+     "last": 1261.6
+    },
+    "SPCXBUSDT": {
+     "qty": 0.172009537371973,
+     "entry": 141.52072499999997,
+     "stop": 139.61999999999998,
+     "tp": null,
+     "last": 141.19
+    },
+    "ETHUSDT": {
+     "qty": 0.010494806945315157,
+     "entry": 2292.9358949999996,
+     "stop": 2272.72,
+     "tp": null,
+     "last": 2286.1
     }
    }
   },
   "momentum": {
-   "equity": 97.2427,
-   "cash": 72.9276,
+   "equity": 97.0665,
+   "cash": 48.6164,
    "realized": -2.6043,
    "closed_trades": 11,
    "wins": 2,
@@ -88,7 +109,14 @@
      "entry": 1273.2563099999998,
      "stop": 1255.8228571428572,
      "tp": null,
-     "last": 1266.56
+     "last": 1261.6
+    },
+    "SPCXBUSDT": {
+     "qty": 0.1716135569068806,
+     "entry": 141.52072499999997,
+     "stop": 139.61999999999998,
+     "tp": null,
+     "last": 141.19
     }
    }
   },
@@ -101,20 +129,12 @@
    "open_positions": {}
   },
   "volume_spike": {
-   "equity": 93.2571,
-   "cash": 69.974,
-   "realized": -6.6702,
-   "closed_trades": 65,
+   "equity": 93.1577,
+   "cash": 93.1577,
+   "realized": -6.8423,
+   "closed_trades": 66,
    "wins": 20,
-   "open_positions": {
-    "ZECUSDT": {
-     "qty": 0.018382941084612865,
-     "entry": 1269.244305,
-     "stop": 1263.0457142857142,
-     "tp": 1276.9564285714287,
-     "last": 1266.56
-    }
-   }
+   "open_positions": {}
   },
   "eth_ema50_100_4h": {
    "equity": 100.0,

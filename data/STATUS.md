@@ -1,14 +1,14 @@
 # Paper desk status (PAPER ONLY)
 
-Updated: 2026-11-02 13:45:27 ART | source: binance | last closed 1m bar: 2026-11-02 13:44:00 ART | gap before run: 65 min
+Updated: 2026-11-02 14:40:26 ART | source: binance | last closed 1m bar: 2026-11-02 14:39:00 ART | gap before run: 55 min
 
 | strategy | equity $ | realized $ | closed | wins | open |
 |---|---|---|---|---|---|
-| breakout | 94.46 | -5.31 | 53 | 10 | SPCXBUSDT |
-| ema_cross_atr | 96.59 | -3.28 | 18 | 2 | SPCXBUSDT |
-| momentum | 96.87 | -3.00 | 12 | 2 | SPCXBUSDT |
-| rsi_meanrev | 97.62 | -2.29 | 36 | 13 | SOLUSDT, PEPEUSDT, LINKUSDT, ZECUSDT |
-| volume_spike | 92.81 | -7.19 | 68 | 20 | - |
+| breakout | 94.33 | -5.67 | 54 | 10 | - |
+| ema_cross_atr | 96.46 | -3.28 | 18 | 2 | SPCXBUSDT |
+| momentum | 96.73 | -3.00 | 12 | 2 | SPCXBUSDT |
+| rsi_meanrev | 95.79 | -4.12 | 41 | 13 | PEPEUSDT, HYPEUSDT, ZECUSDT |
+| volume_spike | 92.72 | -7.19 | 68 | 20 | PEPEUSDT |
 | eth_ema50_100_4h | 100.00 | +0.00 | 0 | 0 | - |
 | sol_donchian110_10_4h | 100.00 | +0.00 | 0 | 0 | - |
 

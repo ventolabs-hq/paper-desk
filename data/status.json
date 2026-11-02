@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-02 19:39:10 ART",
+ "updated_art": "2026-11-02 20:20:40 ART",
  "last_run": {
-  "run_art": "2026-11-02 19:39:03 ART",
+  "run_art": "2026-11-02 20:20:35 ART",
   "source": "binance",
   "minutes_replayed": 41,
   "bars": 574,
   "gap_min_before_run": 41,
   "skipped_min": 0,
-  "new_trades": 2,
-  "last_bar_art": "2026-11-02 19:38:00 ART",
-  "secs": 7.6,
+  "new_trades": 3,
+  "last_bar_art": "2026-11-02 20:19:00 ART",
+  "secs": 5.8,
   "errors": 0,
-  "gha_run": "41539030406"
+  "gha_run": "41544664771"
  },
  "symbols": [
   "BTCUSDT",
@@ -31,8 +31,8 @@
  ],
  "strategies": {
   "breakout": {
-   "equity": 93.0003,
-   "cash": 23.1785,
+   "equity": 93.185,
+   "cash": 0.0,
    "realized": -6.8199,
    "closed_trades": 61,
    "wins": 10,
@@ -42,26 +42,33 @@
      "entry": 1.24972455,
      "stop": 1.2443857142857144,
      "tp": 1.2585285714285714,
-     "last": 1.2496
+     "last": 1.25
     },
     "PEPEUSDT": {
      "qty": 4898692.256425791,
      "entry": 4.76238e-06,
      "stop": 4.724642857142857e-06,
      "tp": 4.830714285714286e-06,
-     "last": 4.77e-06
+     "last": 4.76e-06
     },
     "UNIUSDT": {
      "qty": 3.2518121400530346,
      "entry": 7.1085525,
      "stop": 7.0569999999999995,
      "tp": 7.201000000000001,
-     "last": 7.064
+     "last": 7.142
+    },
+    "TRXUSDT": {
+     "qty": 72.48298468930645,
+     "entry": 0.31945964999999993,
+     "stop": 0.31905357142857144,
+     "tp": 0.3197928571428571,
+     "last": 0.3194
     }
    }
   },
   "ema_cross_atr": {
-   "equity": 96.5594,
+   "equity": 96.5312,
    "cash": 24.0278,
    "realized": -3.6628,
    "closed_trades": 19,
@@ -72,27 +79,27 @@
      "entry": 1.2509251499999998,
      "stop": 1.2389714285714284,
      "tp": null,
-     "last": 1.2496
+     "last": 1.25
     },
     "PEPEUSDT": {
      "qty": 5104880.712493892,
      "entry": 4.712354999999999e-06,
      "stop": 4.624285714285713e-06,
      "tp": null,
-     "last": 4.77e-06
+     "last": 4.76e-06
     },
     "TRXUSDT": {
      "qty": 75.57196978938188,
      "entry": 0.31885935,
      "stop": 0.3178142857142857,
      "tp": null,
-     "last": 0.3192
+     "last": 0.3194
     }
    }
   },
   "momentum": {
-   "equity": 96.8146,
-   "cash": 72.4608,
+   "equity": 96.7917,
+   "cash": 48.2457,
    "realized": -3.3534,
    "closed_trades": 13,
    "wins": 2,
@@ -102,7 +109,14 @@
      "entry": 4.732364999999999e-06,
      "stop": 4.638571428571428e-06,
      "tp": null,
-     "last": 4.77e-06
+     "last": 4.76e-06
+    },
+    "UNIUSDT": {
+     "qty": 3.394467440751951,
+     "entry": 7.1265615,
+     "stop": 7.016285714285714,
+     "tp": null,
+     "last": 7.142
     }
    }
   },
@@ -115,12 +129,20 @@
    "open_positions": {}
   },
   "volume_spike": {
-   "equity": 91.7939,
-   "cash": 91.7939,
+   "equity": 91.7114,
+   "cash": 68.8225,
    "realized": -8.2061,
    "closed_trades": 77,
    "wins": 22,
-   "open_positions": {}
+   "open_positions": {
+    "PEPEUSDT": {
+     "qty": 4808596.11633462,
+     "entry": 4.772385e-06,
+     "stop": 4.738571428571429e-06,
+     "tp": 4.817142857142857e-06,
+     "last": 4.76e-06
+    }
+   }
   },
   "eth_ema50_100_4h": {
    "equity": 100.0,

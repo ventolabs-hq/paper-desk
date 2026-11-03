@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-03 06:27:57 ART",
+ "updated_art": "2026-11-03 13:41:03 ART",
  "last_run": {
-  "run_art": "2026-11-03 06:27:50 ART",
+  "run_art": "2026-11-03 13:40:55 ART",
   "source": "binance",
-  "minutes_replayed": 445,
-  "bars": 6230,
-  "gap_min_before_run": 445,
+  "minutes_replayed": 433,
+  "bars": 6062,
+  "gap_min_before_run": 433,
   "skipped_min": 0,
-  "new_trades": 122,
-  "last_bar_art": "2026-11-03 06:26:00 ART",
-  "secs": 6.9,
+  "new_trades": 23,
+  "last_bar_art": "2026-11-03 13:39:00 ART",
+  "secs": 7.8,
   "errors": 0,
-  "gha_run": "41611206238"
+  "gha_run": "41676652262"
  },
  "symbols": [
   "BTCUSDT",
@@ -31,44 +31,15 @@
  ],
  "strategies": {
   "breakout": {
-   "equity": 90.4823,
-   "cash": -0.0,
-   "realized": -9.3578,
-   "closed_trades": 88,
+   "equity": 90.3435,
+   "cash": 90.3435,
+   "realized": -9.6565,
+   "closed_trades": 92,
    "wins": 13,
-   "open_positions": {
-    "TRXUSDT": {
-     "qty": 70.40479596881738,
-     "entry": 0.32186085,
-     "stop": 0.32135714285714284,
-     "tp": 0.3223857142857143,
-     "last": 0.3223
-    },
-    "SNDKBUSDT": {
-     "qty": 0.020532216818805113,
-     "entry": 1103.501475,
-     "stop": 1096.8364285714285,
-     "tp": 1115.1771428571428,
-     "last": 1102.68
-    },
-    "HYPEUSDT": {
-     "qty": 0.268764784850035,
-     "entry": 84.36215999999999,
-     "stop": 83.8775,
-     "tp": 85.205,
-     "last": 84.24
-    },
-    "SPCXBUSDT": {
-     "qty": 0.16370630902847386,
-     "entry": 137.80887,
-     "stop": 137.43785714285715,
-     "tp": 138.34428571428572,
-     "last": 137.5
-    }
-   }
+   "open_positions": {}
   },
   "ema_cross_atr": {
-   "equity": 95.9729,
+   "equity": 97.4147,
    "cash": 0.0,
    "realized": -4.4719,
    "closed_trades": 26,
@@ -79,61 +50,69 @@
      "entry": 0.31885935,
      "stop": 0.3178142857142857,
      "tp": null,
-     "last": 0.3223
+     "last": 0.323
     },
     "UNIUSDT": {
      "qty": 3.417572106131892,
      "entry": 6.9984975,
      "stop": 6.903857142857143,
      "tp": null,
-     "last": 7.105
+     "last": 7.293
     },
     "XRPUSDT": {
      "qty": 18.691355008840667,
      "entry": 1.25632785,
      "stop": 1.2494714285714288,
      "tp": null,
-     "last": 1.2546
+     "last": 1.277
     },
     "SNDKBUSDT": {
      "qty": 0.02166001590977382,
      "entry": 1105.05225,
      "stop": 1090.3728571428571,
      "tp": null,
-     "last": 1102.68
+     "last": 1117.81
     }
    }
   },
   "momentum": {
-   "equity": 96.5528,
-   "cash": 47.9572,
-   "realized": -3.7797,
-   "closed_trades": 16,
-   "wins": 3,
+   "equity": 97.6711,
+   "cash": 73.8863,
+   "realized": -2.0027,
+   "closed_trades": 22,
+   "wins": 7,
    "open_positions": {
-    "UNIUSDT": {
-     "qty": 3.4465397491238057,
-     "entry": 6.979488,
-     "stop": 6.876428571428572,
+    "HYPEUSDT": {
+     "qty": 0.2763098377091899,
+     "entry": 87.173565,
+     "stop": 85.32142857142857,
      "tp": null,
-     "last": 7.105
-    },
-    "SNDKBUSDT": {
-     "qty": 0.021863038131352912,
-     "entry": 1105.05225,
-     "stop": 1090.3728571428571,
-     "tp": null,
-     "last": 1102.68
+     "last": 86.08
     }
    }
   },
   "rsi_meanrev": {
-   "equity": 94.4251,
-   "cash": 94.4251,
-   "realized": -5.5749,
-   "closed_trades": 72,
-   "wins": 26,
-   "open_positions": {}
+   "equity": 94.1167,
+   "cash": 47.0554,
+   "realized": -5.8127,
+   "closed_trades": 75,
+   "wins": 27,
+   "open_positions": {
+    "UUSDT": {
+     "qty": 23.53977446996305,
+     "entry": 1.0002999,
+     "stop": 0.9995142857142858,
+     "tp": null,
+     "last": 0.9998
+    },
+    "SPCXBUSDT": {
+     "qty": 0.16714914625458233,
+     "entry": 140.82037499999998,
+     "stop": 139.76,
+     "tp": null,
+     "last": 140.75
+    }
+   }
   },
   "volume_spike": {
    "equity": 90.111,

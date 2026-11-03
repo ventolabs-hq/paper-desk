@@ -1,0 +1,75 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vento Labs · Memes Debate Desk (PAPER)</title>
+<style>
+:root{--bg:#0b0f17;--p:#121a27;--b:#1f2a3c;--t:#d7e0ee;--m:#7f8ea6;--g:#2ecc71;--r:#ff5c5c;--y:#f5c542;--c:#4fc3f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:13px/1.4 ui-monospace,Menlo,Consolas,monospace}
+.paper{background:#ff5c5c;color:#000;text-align:center;font-weight:800;letter-spacing:2px;padding:6px;font-size:15px}
+.top{display:flex;gap:16px;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--b);align-items:center}
+.kpi{background:var(--p);border:1px solid var(--b);border-radius:8px;padding:8px 12px;min-width:150px}.kpi b{font-size:20px;display:block}
+.pos{color:var(--g)}.neg{color:var(--r)}.mut{color:var(--m)}
+.tick{overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--b);background:#0e1420}.tick div{display:inline-block;padding:6px 0;animation:sc 90s linear infinite}
+.tick span{margin-right:28px}@keyframes sc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:12px}
+.panel{background:var(--p);border:1px solid var(--b);border-radius:8px;padding:10px;max-height:380px;overflow:auto}
+.panel h3{margin:0 0 8px;font-size:12px;color:var(--c);text-transform:uppercase;letter-spacing:1px}
+.wide{grid-column:span 2}.full{grid-column:1/-1}
+table{width:100%;border-collapse:collapse}td,th{padding:3px 5px;border-bottom:1px solid var(--b);text-align:left;font-size:12px}
+details{border-bottom:1px solid var(--b);padding:4px 0}summary{cursor:pointer}
+.tag{padding:1px 6px;border-radius:4px;font-size:11px;font-weight:700}.buy{background:#1d5c38}.skip{background:#6b2121}.wait{background:#6b5a14}.na{background:#333}
+pre{white-space:pre-wrap;font-size:11px;color:var(--m);margin:0}
+#graph{width:100%;height:440px}
+</style></head><body>
+<div class="paper">⚠ PAPER TRADING · NO REAL FUNDS · NO KEYS · SIMULATED FILLS ON REAL PRICES ⚠</div>
+<div class="top" id="top"></div>
+<div class="tick"><div id="tick"></div></div>
+<div class="grid">
+ <div class="panel wide" style="max-height:none"><h3>Agent graph</h3><svg id="graph" viewBox="0 0 800 440"></svg></div>
+ <div class="panel"><h3>Equity: debate vs random control</h3><svg id="eq" viewBox="0 0 300 200" style="width:100%"></svg><div id="eqleg"></div></div>
+ <div class="panel"><h3>Filter kills by reason</h3><div id="kills"></div></div>
+ <div class="panel wide"><h3>Bear vetoes / debates (with News + Chief)</h3><div id="deb"></div></div>
+ <div class="panel"><h3>Open positions</h3><div id="open"></div></div>
+ <div class="panel"><h3>Executor trades</h3><div id="trades"></div></div>
+ <div class="panel"><h3>Risk: stops / trails</h3><div id="stops"></div></div>
+ <div class="panel full"><h3>All books</h3><div id="books"></div></div>
+ <div class="panel full"><h3>Logger</h3><pre id="log"></pre></div>
+</div>
+<script>
+const $=id=>document.getElementById(id), fx=(v,d=2)=>v==null?'–':(+v).toFixed(d), cls=v=>v>0?'pos':v<0?'neg':'mut';
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function graph(S){const d=S.dstat||{},k=Object.values(d.kills||{}).reduce((a,b)=>a+b,0),n=d.news||{},c=d.chief||{};
+ const tr=(S.trades||[]),buys=tr.filter(r=>r.book=='debate'&&r.event=='buy').length,st=(S.stops||[]).filter(r=>r.book=='debate');
+ const rebut=(S.debates||[]).reduce((a,x)=>a+(x.bear||[]).filter(b=>b.rebutted).length,0);
+ const N=[['Scout',`pool ${S.pool??0}`,`scanned ${d.cand||0}`],['Filter',`killed ${k}`,`passed ${(d.cand||0)-k}`],['Bear',`debated ${d.debated||0}`,`vetoes ${d.vetoes||0}`],
+  ['Analyst',`rebuttals ${rebut}`,`(last ${(S.debates||[]).length})`],['News',`buy ${n.buy||0} wait ${n.wait||0}`,`skip ${n.skip||0} · x: n/a`],
+  ['Executor',`buys ${buys}`,`open ${(S.books.debate?.open||[]).length}`],['Risk',`stops ${st.filter(r=>r.reason.startsWith('stop')).length}`,`trails ${st.filter(r=>r.reason.startsWith('trail')).length}`]];
+ let h='',cx=400,cy=220,R=170;N.forEach((x,i)=>{const a=-Math.PI/2+i*2*Math.PI/N.length,X=cx+R*1.6*Math.cos(a),Y=cy+R*Math.sin(a);
+  h+=`<line x1="${cx}" y1="${cy}" x2="${X}" y2="${Y}" stroke="#2b3a55" stroke-width="2"/><g><rect x="${X-70}" y="${Y-30}" width="140" height="60" rx="10" fill="#16233a" stroke="#4fc3f7"/>
+  <circle cx="${X-58}" cy="${Y-18}" r="4" fill="#2ecc71"/><text x="${X}" y="${Y-12}" fill="#d7e0ee" text-anchor="middle" font-weight="700">${x[0]}</text>
+  <text x="${X}" y="${Y+5}" fill="#7f8ea6" text-anchor="middle" font-size="11">${x[1]}</text><text x="${X}" y="${Y+20}" fill="#7f8ea6" text-anchor="middle" font-size="11">${x[2]}</text></g>`});
+ h+=`<circle cx="${cx}" cy="${cy}" r="58" fill="#1a1230" stroke="#f5c542" stroke-width="2"/><text x="${cx}" y="${cy-14}" fill="#f5c542" text-anchor="middle" font-weight="800" font-size="16">CHIEF</text>
+ <text x="${cx}" y="${cy+6}" fill="#d7e0ee" text-anchor="middle" font-size="11">buy ${c.buy||0} · wait ${c.wait||0}</text><text x="${cx}" y="${cy+22}" fill="#d7e0ee" text-anchor="middle" font-size="11">skip ${c.skip||0}</text>`;$('graph').innerHTML=h}
+function eq(S){const A=S.equity.debate||[],B=S.equity.debate_random||[],all=A.concat(B).map(x=>x[1]);if(!all.length){$('eq').innerHTML='<text x="10" y="20" fill="#7f8ea6">no data yet</text>';return}
+ const lo=Math.min(...all,100)-1,hi=Math.max(...all,100)+1,ln=(s,col)=>s.length?`<polyline fill="none" stroke="${col}" stroke-width="2" points="${s.map((p,i)=>`${10+280*i/Math.max(1,s.length-1)},${190-180*(p[1]-lo)/(hi-lo)}`).join(' ')}"/>`:'';
+ const y0=190-180*(100-lo)/(hi-lo);$('eq').innerHTML=`<line x1="10" x2="290" y1="${y0}" y2="${y0}" stroke="#333" stroke-dasharray="4"/>`+ln(B,'#7f8ea6')+ln(A,'#4fc3f7');
+ $('eqleg').innerHTML=`<span style="color:#4fc3f7">■ debate</span> &nbsp; <span class="mut">■ random control</span> &nbsp; <span class="mut">--- $100 cash</span>`}
+async function load(){let S;try{S=await (await fetch('snapshot.json?t='+Date.now())).json()}catch(e){$('log').textContent='snapshot fetch failed: '+e;return}
+ const d=S.books.debate,r=S.books.debate_random;
+ $('top').innerHTML=[['Debate equity',`$${fx(d.equity)}`,d.pnl],['Debate P&L',`${d.pnl>=0?'+':''}${fx(d.pnl)}`,d.pnl],['Random control',`$${fx(r.equity)}`,r.pnl],['Control P&L',`${r.pnl>=0?'+':''}${fx(r.pnl)}`,r.pnl],
+  ['Edge vs control',fx(d.pnl-r.pnl),d.pnl-r.pnl],['Win% / avgX',`${fx(d.win,0)}% / ${fx(d.avgx,3)}`,0],['MaxDD d / ctrl',`${fx(d.maxdd,1)}% / ${fx(r.maxdd,1)}%`,0]]
+  .map(x=>`<div class="kpi"><span class="mut">${x[0]}</span><b class="${cls(x[2])}">${x[1]}</b></div>`).join('')+`<div class="mut">snapshot ${esc(S.generated_utc)} · cycle ${S.cycle}</div>`;
+ const tk=(S.ticker||[]).map(x=>`<span>${esc(x.symbol)} $${(+x.price).toPrecision(4)} <span class="mut">mc ${(x.mcap/1e6).toFixed(2)}M</span> <span class="tag ${x.stage=='kill'?'skip':x.stage}">${esc(x.stage)}</span></span>`).join('');$('tick').innerHTML=tk+tk;
+ graph(S);eq(S);
+ const kc={};(S.kills||[]).forEach(x=>x.kills.forEach(k=>kc[k]=(kc[k]||0)+1));const tot=S.dstat.kills||kc;
+ $('kills').innerHTML='<table>'+Object.entries(tot).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${v}</td></tr>`).join('')+'</table><br><table>'+
+  (S.kills||[]).slice(-25).reverse().map(x=>`<tr><td>${esc(x.ts_utc.slice(11,16))}Z</td><td>${esc(x.symbol)}</td><td class="mut">${esc(x.kills.join(', '))}</td></tr>`).join('')+'</table>';
+ $('deb').innerHTML=(S.debates||[]).slice().reverse().map(x=>`<details><summary>${esc(x.ts_utc.slice(11,16))}Z <b>${esc(x.symbol)}</b> mc $${(x.mcap/1e6).toFixed(2)}M · chief <span class="tag ${esc(x.decision)}">${esc(x.decision)}</span> · news <span class="tag ${(x.news||{}).tag=='n/a'?'na':esc((x.news||{}).tag)}">${esc((x.news||{}).tag||'–')}</span> <span class="mut">${esc(x.chief_reason||'')}</span></summary>
+  <table>${(x.bear||[]).map(b=>`<tr><td>🐻 ${esc(b.check)}</td><td>${esc(b.claim)}</td><td class="${b.rebutted?'pos':'neg'}">${b.rebutted?'REBUTTED':'UNREBUTTED'}</td><td class="mut">${esc(b.rebuttal)}</td></tr>`).join('')}</table>
+  <pre>NEWS: ${esc(((x.news||{}).reasons||[]).join(' | '))}\n${esc(JSON.stringify((x.news||{}).data||{}))}\nBEAR DATA: ${esc(JSON.stringify((x.bear||[]).map(b=>b.data)))}</pre></details>`).join('')||'<span class="mut">none yet</span>';
+ const op=[...d.open.map(o=>({...o,b:'debate'})),...r.open.map(o=>({...o,b:'control'}))];
+ $('open').innerHTML='<table><tr><th>book</th><th>token</th><th>ret%</th><th>$</th><th>min</th></tr>'+op.map(o=>`<tr><td>${o.b}</td><td>${esc(o.token.slice(0,6))}</td><td class="${cls(o.ret)}">${fx(o.ret)}</td><td>${fx(o.usd)}</td><td>${o.mins}</td></tr>`).join('')+'</table>';
+ $('trades').innerHTML='<table>'+(S.trades||[]).slice(-40).reverse().map(t=>`<tr><td>${esc(t.ts_art.slice(11,16))}</td><td>${esc(t.book.replace('debate_random','ctrl'))}</td><td>${esc(t.event)}</td><td>${esc(t.symbol)}</td><td class="${cls(+t.pnl_usd)}">${esc(t.pnl_usd||t.usd)}</td></tr>`).join('')+'</table>';
+ $('stops').innerHTML='<table>'+(S.stops||[]).slice(-30).reverse().map(t=>`<tr><td>${esc(t.ts_art.slice(11,16))}</td><td>${esc(t.book.replace('debate_random','ctrl'))}</td><td>${esc(t.symbol)}</td><td>${esc(t.reason)}</td><td>x${esc(t.multiple)}</td></tr>`).join('')+'</table>';
+ $('books').innerHTML='<table><tr><th>book</th><th>equity</th><th>P&L</th><th>trades</th><th>win%</th><th>avgX</th><th>maxDD%</th><th>fails</th><th>open</th></tr>'+Object.entries(S.books).map(([k,b])=>`<tr><td>${k}</td><td>${fx(b.equity)}</td><td class="${cls(b.pnl)}">${fx(b.pnl)}</td><td>${b.trades}</td><td>${fx(b.win,0)}</td><td>${fx(b.avgx,3)}</td><td>${fx(b.maxdd,1)}</td><td>${b.fails}</td><td>${b.open.length}</td></tr>`).join('')+'</table>';
+ $('log').textContent=(S.log||[]).slice(-40).join('\n');}
+load();setInterval(load,45000);
+</script></body></html>

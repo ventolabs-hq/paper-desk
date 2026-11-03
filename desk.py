@@ -69,6 +69,8 @@ class Kraken:
         return [b for b in bars if b["t"] >= start and b["t"] + SEC[tf] <= now]
 
 # ---------------- paper books ----------------
+# Books cut by the Lead (decisions in money-experiment/decisions/2026-11-03-kill-hf-books.md): no new entries, open positions closed at the next bar.
+KILLED = {"breakout": "2026-11-03", "volume_spike": "2026-11-03"}
 class Desk:
     def __init__(s):
         os.makedirs(DATA, exist_ok=True)
@@ -85,7 +87,7 @@ class Desk:
                                  qty=f"{qty:.8g}", fee=f"{fee:.6f}", pnl=f"{pnl:.6f}", cash_after=f"{cash:.4f}", reason=reason))
     def open(s, name, sym, price, sig, ts):
         b = s.st["books"][name]
-        if sym in b["pos"]: return False
+        if name in KILLED or sym in b["pos"]: return False
         alloc = min(s.equity(b) * MAXPOS, b["cash"] / (1 + FEE))
         if alloc < 1: return False
         fill = price * (1 + SLIP); qty = alloc / fill; fee = fill * qty * FEE
@@ -139,6 +141,9 @@ class Desk:
                 i = idx[sym]["1m"].get(t)
                 if i is None or t < start_of(sym): continue
                 bar = v["1m"][i]; bars += 1; s.px[sym] = bar["c"]
+                for kn in KILLED:
+                    kb = s.st["books"].get(kn)
+                    if kb and sym in kb["pos"]: s.close(kn, sym, bar["c"], f"KILLED {KILLED[kn]}", close_ts)
                 for name, b in s.st["books"].items():           # hard stops / TPs on the bar's range
                     p = b["pos"].get(sym)
                     if not p: continue
@@ -186,7 +191,7 @@ class Desk:
         lines = ["# Paper desk status (PAPER ONLY)", "", f"Updated: {status['updated_art']} | source: {run['source']} | last closed 1m bar: {run['last_bar_art']} | gap before run: {gap_min} min", "",
                  "| strategy | equity $ | realized $ | closed | wins | open |", "|---|---|---|---|---|---|"]
         for n, b in books.items():
-            lines.append(f"| {n} | {b['equity']:.2f} | {b['realized']:+.2f} | {b['closed_trades']} | {b['wins']} | {', '.join(b['open_positions']) or '-'} |")
+            lines.append(f"| {n}{' (killed ' + KILLED[n] + ')' if n in KILLED else ''} | {b['equity']:.2f} | {b['realized']:+.2f} | {b['closed_trades']} | {b['wins']} | {', '.join(b['open_positions']) or '-'} |")
         lines += ["", "Each book starts with $100 virtual. Fees 0.1%, slippage 0.05%, long-only, max 25% per position. Not financial advice."]
         open(os.path.join(DATA, "STATUS.md"), "w").write("\n".join(lines) + "\n")
         print(json.dumps(run))

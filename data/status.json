@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-03 13:41:03 ART",
+ "updated_art": "2026-11-03 14:16:32 ART",
  "last_run": {
-  "run_art": "2026-11-03 13:40:55 ART",
+  "run_art": "2026-11-03 14:16:25 ART",
   "source": "binance",
-  "minutes_replayed": 433,
-  "bars": 6062,
-  "gap_min_before_run": 433,
+  "minutes_replayed": 36,
+  "bars": 504,
+  "gap_min_before_run": 36,
   "skipped_min": 0,
-  "new_trades": 23,
-  "last_bar_art": "2026-11-03 13:39:00 ART",
-  "secs": 7.8,
+  "new_trades": 2,
+  "last_bar_art": "2026-11-03 14:15:00 ART",
+  "secs": 7.1,
   "errors": 0,
-  "gha_run": "41676652262"
+  "gha_run": "41682599403"
  },
  "symbols": [
   "BTCUSDT",
@@ -39,7 +39,7 @@
    "open_positions": {}
   },
   "ema_cross_atr": {
-   "equity": 97.4147,
+   "equity": 97.6192,
    "cash": 0.0,
    "realized": -4.4719,
    "closed_trades": 26,
@@ -50,34 +50,34 @@
      "entry": 0.31885935,
      "stop": 0.3178142857142857,
      "tp": null,
-     "last": 0.323
+     "last": 0.3231
     },
     "UNIUSDT": {
      "qty": 3.417572106131892,
      "entry": 6.9984975,
      "stop": 6.903857142857143,
      "tp": null,
-     "last": 7.293
+     "last": 7.307
     },
     "XRPUSDT": {
      "qty": 18.691355008840667,
      "entry": 1.25632785,
      "stop": 1.2494714285714288,
      "tp": null,
-     "last": 1.277
+     "last": 1.2816
     },
     "SNDKBUSDT": {
      "qty": 0.02166001590977382,
      "entry": 1105.05225,
      "stop": 1090.3728571428571,
      "tp": null,
-     "last": 1117.81
+     "last": 1120.72
     }
    }
   },
   "momentum": {
-   "equity": 97.6711,
-   "cash": 73.8863,
+   "equity": 97.6865,
+   "cash": 24.9374,
    "realized": -2.0027,
    "closed_trades": 22,
    "wins": 7,
@@ -87,12 +87,26 @@
      "entry": 87.173565,
      "stop": 85.32142857142857,
      "tp": null,
-     "last": 86.08
+     "last": 86.38
+    },
+    "SPCXBUSDT": {
+     "qty": 0.17282647394970807,
+     "entry": 141.52072499999997,
+     "stop": 139.32571428571427,
+     "tp": null,
+     "last": 141.74
+    },
+    "ZECUSDT": {
+     "qty": 0.020141226454187464,
+     "entry": 1213.50645,
+     "stop": 1187.4900000000002,
+     "tp": null,
+     "last": 1210.7
     }
    }
   },
   "rsi_meanrev": {
-   "equity": 94.1167,
+   "equity": 94.2822,
    "cash": 47.0554,
    "realized": -5.8127,
    "closed_trades": 75,
@@ -110,7 +124,7 @@
      "entry": 140.82037499999998,
      "stop": 139.76,
      "tp": null,
-     "last": 140.75
+     "last": 141.74
     }
    }
   },

@@ -8,7 +8,7 @@
    "wins": 13
   },
   "ema_cross_atr": {
-   "cash": -3.552713678800501e-15,
+   "cash": 23.521067094324994,
    "pos": {
     "XRPUSDT": {
      "qty": 18.956587175129673,
@@ -33,18 +33,10 @@
      "tp": null,
      "ts": 1793803500,
      "cost": 24.15429864157585
-    },
-    "PEPEUSDT": {
-     "qty": 4646230.749700497,
-     "entry": 5.22261e-06,
-     "stop": 5.07e-06,
-     "tp": null,
-     "ts": 1793805300,
-     "cost": 24.289716626869005
     }
    },
-   "realized": -2.7509943858923087,
-   "n": 43,
+   "realized": -3.5196439184363157,
+   "n": 44,
    "wins": 10
   },
   "momentum": {
@@ -57,14 +49,6 @@
      "tp": null,
      "ts": 1793804400,
      "cost": 24.583482084873268
-    },
-    "ZECUSDT": {
-     "qty": 0.01856211570871185,
-     "entry": 1322.570955,
-     "stop": 1289.5085714285715,
-     "tp": null,
-     "ts": 1793804400,
-     "cost": 24.574264814791224
     },
     "XRPUSDT": {
      "qty": 18.597409032590686,
@@ -81,14 +65,22 @@
      "tp": null,
      "ts": 1793805300,
      "cost": 24.257449514082516
+    },
+    "UNIUSDT": {
+     "qty": 3.1505468077345062,
+     "entry": 7.6738349999999995,
+     "stop": 7.442428571428572,
+     "tp": null,
+     "ts": 1793814300,
+     "cost": 24.200953138693656
     }
    },
-   "realized": -2.062714588171289,
-   "n": 36,
+   "realized": -2.4360262642688575,
+   "n": 37,
    "wins": 12
   },
   "rsi_meanrev": {
-   "cash": 69.18068066246855,
+   "cash": 22.9906261833253,
    "pos": {
     "XRPUSDT": {
      "qty": 17.613133835872883,
@@ -97,6 +89,22 @@
      "tp": null,
      "ts": 1793809500,
      "cost": 23.10253480088067
+    },
+    "HYPEUSDT": {
+     "qty": 0.27205034517191445,
+     "entry": 84.80238,
+     "stop": 83.90142857142858,
+     "tp": null,
+     "ts": 1793812800,
+     "cost": 23.093587267150255
+    },
+    "SOLUSDT": {
+     "qty": 0.2402777962776771,
+     "entry": 96.02799,
+     "stop": 95.29428571428572,
+     "tp": null,
+     "ts": 1793813400,
+     "cost": 23.09646721199299
     }
    },
    "realized": -7.716784536650749,
@@ -139,28 +147,28 @@
    "inpos": 0
   }
  },
- "last_bar": 1793810700,
+ "last_bar": 1793814420,
  "last_bar_sym": {
-  "BTCUSDT": 1793810700,
-  "ETHUSDT": 1793810700,
-  "SOLUSDT": 1793810700,
-  "TRXUSDT": 1793810700,
-  "ZECUSDT": 1793810700,
-  "BNBUSDT": 1793810700,
-  "NEARUSDT": 1793810700,
-  "UNIUSDT": 1793810700,
-  "PEPEUSDT": 1793810700,
-  "XRPUSDT": 1793810700,
+  "BTCUSDT": 1793814420,
+  "ETHUSDT": 1793814420,
+  "SOLUSDT": 1793814420,
+  "TRXUSDT": 1793814420,
+  "ZECUSDT": 1793814420,
+  "BNBUSDT": 1793814420,
+  "NEARUSDT": 1793814420,
+  "UNIUSDT": 1793814420,
+  "PEPEUSDT": 1793814420,
+  "XRPUSDT": 1793814420,
   "XPLUSDT": 1793565360,
   "AVAXUSDT": 1793565360,
   "LINKUSDT": 1793661540,
   "BEAMXUSDT": 1793626800,
-  "HYPEUSDT": 1793810700,
-  "SUIUSDT": 1793810700,
+  "HYPEUSDT": 1793814420,
+  "SUIUSDT": 1793814420,
   "SPCXBUSDT": 1793744460,
-  "UUSDT": 1793810700,
+  "UUSDT": 1793814420,
   "SNDKBUSDT": 1793752860,
-  "RWUSDUSDT": 1793810700
+  "RWUSDUSDT": 1793814420
  },
  "universe": [
   "BTCUSDT",
@@ -181,25 +189,25 @@
  "universe_day": "2026-11-04",
  "source": "binance",
  "px": {
-  "BTCUSDT": 80688.0,
-  "ETHUSDT": 2437.58,
-  "SOLUSDT": 96.91,
+  "BTCUSDT": 80392.72,
+  "ETHUSDT": 2428.0,
+  "SOLUSDT": 95.85,
   "TRXUSDT": 0.3204,
-  "ZECUSDT": 1320.08,
-  "BNBUSDT": 720.1,
-  "NEARUSDT": 4.143,
-  "UNIUSDT": 7.725,
-  "PEPEUSDT": 5.19e-06,
-  "XRPUSDT": 1.314,
+  "ZECUSDT": 1307.98,
+  "BNBUSDT": 716.29,
+  "NEARUSDT": 4.126,
+  "UNIUSDT": 7.677,
+  "PEPEUSDT": 5.05e-06,
+  "XRPUSDT": 1.3127,
   "XPLUSDT": 0.07152,
   "AVAXUSDT": 8.676,
   "LINKUSDT": 11.148,
   "BEAMXUSDT": 0.004939,
-  "HYPEUSDT": 85.7,
-  "SUIUSDT": 0.9493,
+  "HYPEUSDT": 84.77,
+  "SUIUSDT": 0.9377,
   "SPCXBUSDT": 142.31,
   "UUSDT": 0.9996,
   "SNDKBUSDT": 1113.22,
-  "RWUSDUSDT": 0.9993
+  "RWUSDUSDT": 0.9994
  }
 }

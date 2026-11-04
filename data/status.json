@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-03 23:34:24 ART",
+ "updated_art": "2026-11-04 06:50:57 ART",
  "last_run": {
-  "run_art": "2026-11-03 23:34:16 ART",
+  "run_art": "2026-11-04 06:50:49 ART",
   "source": "binance",
-  "minutes_replayed": 112,
-  "bars": 1568,
-  "gap_min_before_run": 112,
+  "minutes_replayed": 436,
+  "bars": 6104,
+  "gap_min_before_run": 436,
   "skipped_min": 0,
-  "new_trades": 3,
-  "last_bar_art": "2026-11-03 23:33:00 ART",
-  "secs": 8.4,
+  "new_trades": 32,
+  "last_bar_art": "2026-11-04 06:49:00 ART",
+  "secs": 7.7,
   "errors": 0,
-  "gha_run": "41761597923"
+  "gha_run": "41810252460"
  },
  "symbols": [
   "BTCUSDT",
@@ -39,56 +39,99 @@
    "open_positions": {}
   },
   "ema_cross_atr": {
-   "equity": 96.5303,
-   "cash": 48.3261,
-   "realized": -3.3998,
-   "closed_trades": 35,
+   "equity": 98.6162,
+   "cash": 24.0928,
+   "realized": -3.5492,
+   "closed_trades": 37,
    "wins": 7,
    "open_positions": {
-    "RWUSDUSDT": {
-     "qty": 24.082521652353368,
-     "entry": 1.0000998,
-     "stop": 0.9992857142857142,
+    "PEPEUSDT": {
+     "qty": 4952879.241501888,
+     "entry": 4.872435e-06,
+     "stop": 4.754285714285714e-06,
      "tp": null,
-     "last": 0.9997
+     "last": 5.1e-06
     },
-    "UUSDT": {
-     "qty": 24.133792476156593,
-     "entry": 1.0002999,
-     "stop": 0.9995428571428572,
+    "XRPUSDT": {
+     "qty": 18.980891941473825,
+     "entry": 1.2717355499999998,
+     "stop": 1.257342857142857,
      "tp": null,
-     "last": 0.9998
+     "last": 1.2829
+    },
+    "UNIUSDT": {
+     "qty": 3.3355334583782263,
+     "entry": 7.199597999999999,
+     "stop": 7.046571428571428,
+     "tp": null,
+     "last": 7.469
     }
    }
   },
   "momentum": {
-   "equity": 96.148,
-   "cash": 96.148,
+   "equity": 99.1547,
+   "cash": 0.0561,
    "realized": -3.852,
    "closed_trades": 30,
    "wins": 8,
-   "open_positions": {}
+   "open_positions": {
+    "PEPEUSDT": {
+     "qty": 4903058.560243807,
+     "entry": 4.902449999999999e-06,
+     "stop": 4.785714285714286e-06,
+     "tp": null,
+     "last": 5.1e-06
+    },
+    "XRPUSDT": {
+     "qty": 18.914755624898223,
+     "entry": 1.2690342,
+     "stop": 1.2550000000000001,
+     "tp": null,
+     "last": 1.2829
+    },
+    "UNIUSDT": {
+     "qty": 3.3412641774721945,
+     "entry": 7.177587,
+     "stop": 7.0244285714285715,
+     "tp": null,
+     "last": 7.469
+    },
+    "HYPEUSDT": {
+     "qty": 0.2870985127081562,
+     "entry": 83.50173,
+     "stop": 81.7942857142857,
+     "tp": null,
+     "last": 86.63
+    }
+   }
   },
   "rsi_meanrev": {
-   "equity": 93.081,
-   "cash": 46.5463,
-   "realized": -6.5826,
-   "closed_trades": 96,
-   "wins": 34,
+   "equity": 93.5151,
+   "cash": 23.3337,
+   "realized": -6.45,
+   "closed_trades": 107,
+   "wins": 39,
    "open_positions": {
-    "ETHUSDT": {
-     "qty": 0.010344775103495706,
-     "entry": 2265.942405,
-     "stop": 2255.242857142857,
+    "RWUSDUSDT": {
+     "qty": 23.389840105059648,
+     "entry": 0.9998997,
+     "stop": 0.9991285714285714,
      "tp": null,
-     "last": 2257.01
+     "last": 0.9996
     },
-    "ZECUSDT": {
-     "qty": 0.019421459229223392,
-     "entry": 1204.0117050000001,
-     "stop": 1188.6442857142858,
+    "SOLUSDT": {
+     "qty": 0.25153526574493795,
+     "entry": 92.94645,
+     "stop": 92.60000000000001,
      "tp": null,
-     "last": 1193.86
+     "last": 93.19
+    },
+    "TRXUSDT": {
+     "qty": 72.57024860912482,
+     "entry": 0.322161,
+     "stop": 0.32167142857142855,
+     "tp": null,
+     "last": 0.3219
     }
    }
   },

@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-03 21:42:26 ART",
+ "updated_art": "2026-11-03 23:34:24 ART",
  "last_run": {
-  "run_art": "2026-11-03 21:42:14 ART",
+  "run_art": "2026-11-03 23:34:16 ART",
   "source": "binance",
-  "minutes_replayed": 1522,
-  "bars": 3482,
-  "gap_min_before_run": 140,
+  "minutes_replayed": 112,
+  "bars": 1568,
+  "gap_min_before_run": 112,
   "skipped_min": 0,
-  "new_trades": 42,
-  "last_bar_art": "2026-11-03 21:41:00 ART",
-  "secs": 11.7,
+  "new_trades": 3,
+  "last_bar_art": "2026-11-03 23:33:00 ART",
+  "secs": 8.4,
   "errors": 0,
-  "gha_run": "41748778710"
+  "gha_run": "41761597923"
  },
  "symbols": [
   "BTCUSDT",
@@ -39,8 +39,8 @@
    "open_positions": {}
   },
   "ema_cross_atr": {
-   "equity": 96.5617,
-   "cash": 72.4912,
+   "equity": 96.5303,
+   "cash": 48.3261,
    "realized": -3.3998,
    "closed_trades": 35,
    "wins": 7,
@@ -50,7 +50,14 @@
      "entry": 1.0000998,
      "stop": 0.9992857142857142,
      "tp": null,
-     "last": 0.9995
+     "last": 0.9997
+    },
+    "UUSDT": {
+     "qty": 24.133792476156593,
+     "entry": 1.0002999,
+     "stop": 0.9995428571428572,
+     "tp": null,
+     "last": 0.9998
     }
    }
   },
@@ -63,10 +70,10 @@
    "open_positions": {}
   },
   "rsi_meanrev": {
-   "equity": 93.393,
-   "cash": 0.1854,
-   "realized": -6.3761,
-   "closed_trades": 94,
+   "equity": 93.081,
+   "cash": 46.5463,
+   "realized": -6.5826,
+   "closed_trades": 96,
    "wins": 34,
    "open_positions": {
     "ETHUSDT": {
@@ -74,28 +81,14 @@
      "entry": 2265.942405,
      "stop": 2255.242857142857,
      "tp": null,
-     "last": 2263.12
-    },
-    "SOLUSDT": {
-     "qty": 0.2516303321156767,
-     "entry": 92.03599499999999,
-     "stop": 91.51857142857142,
-     "tp": null,
-     "last": 91.86
-    },
-    "BTCUSDT": {
-     "qty": 0.00030369855766469337,
-     "entry": 76924.34294999999,
-     "stop": 76588.41428571429,
-     "tp": null,
-     "last": 76907.66
+     "last": 2257.01
     },
     "ZECUSDT": {
      "qty": 0.019421459229223392,
      "entry": 1204.0117050000001,
      "stop": 1188.6442857142858,
      "tp": null,
-     "last": 1200.97
+     "last": 1193.86
     }
    }
   },

@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-05 09:37:46 ART",
+ "updated_art": "2026-11-05 13:41:41 ART",
  "last_run": {
-  "run_art": "2026-11-05 09:37:37 ART",
+  "run_art": "2026-11-05 13:41:33 ART",
   "source": "binance",
-  "minutes_replayed": 85,
-  "bars": 1190,
-  "gap_min_before_run": 85,
+  "minutes_replayed": 244,
+  "bars": 3416,
+  "gap_min_before_run": 244,
   "skipped_min": 0,
-  "new_trades": 18,
-  "last_bar_art": "2026-11-05 09:36:00 ART",
-  "secs": 8.6,
+  "new_trades": 4,
+  "last_bar_art": "2026-11-05 13:40:00 ART",
+  "secs": 8.1,
   "errors": 0,
-  "gha_run": "42028724268"
+  "gha_run": "42067022637"
  },
  "symbols": [
   "BTCUSDT",
@@ -55,41 +55,12 @@
    "open_positions": {}
   },
   "rsi_meanrev": {
-   "equity": 87.5898,
-   "cash": 0.0,
-   "realized": -12.1452,
-   "closed_trades": 176,
+   "equity": 87.4829,
+   "cash": 87.4829,
+   "realized": -12.5171,
+   "closed_trades": 180,
    "wins": 54,
-   "open_positions": {
-    "SNDKBUSDT": {
-     "qty": 0.022413473510161205,
-     "entry": 983.681595,
-     "stop": 973.9100000000001,
-     "tp": null,
-     "last": 981.79
-    },
-    "SOLUSDT": {
-     "qty": 0.22946895072655463,
-     "entry": 95.56775999999999,
-     "stop": 95.08714285714285,
-     "tp": null,
-     "last": 95.35
-    },
-    "BNBUSDT": {
-     "qty": 0.030773393209031583,
-     "entry": 712.356,
-     "stop": 710.1214285714286,
-     "tp": null,
-     "last": 711.35
-    },
-    "DOGEUSDT": {
-     "qty": 286.98750349721354,
-     "entry": 0.07619808,
-     "stop": 0.07583714285714287,
-     "tp": null,
-     "last": 0.07601
-    }
-   }
+   "open_positions": {}
   },
   "volume_spike": {
    "equity": 90.111,

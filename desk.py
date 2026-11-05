@@ -69,8 +69,8 @@ class Kraken:
         return [b for b in bars if b["t"] >= start and b["t"] + SEC[tf] <= now]
 
 # ---------------- paper books ----------------
-# Books cut by the Lead (decisions in money-experiment/decisions/2026-11-03-kill-hf-books.md): no new entries, open positions closed at the next bar.
-KILLED = {"breakout": "2026-11-03", "volume_spike": "2026-11-03"}
+# Books cut by the Lead (decisions in money-experiment/decisions/2026-11-03-kill-hf-books.md, 2026-11-05-kill-hf-books-2.md): no new entries, open positions closed at the next bar.
+KILLED = {"breakout": "2026-11-03", "volume_spike": "2026-11-03", "rsi_meanrev": "2026-11-05", "ema_cross_atr": "2026-11-05", "momentum": "2026-11-05"}
 class Desk:
     def __init__(s):
         os.makedirs(DATA, exist_ok=True)

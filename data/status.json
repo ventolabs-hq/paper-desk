@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-06 17:43:31 ART",
+ "updated_art": "2026-11-06 21:03:05 ART",
  "last_run": {
-  "run_art": "2026-11-06 17:43:24 ART",
+  "run_art": "2026-11-06 21:02:54 ART",
   "source": "binance",
-  "minutes_replayed": 45,
-  "bars": 630,
-  "gap_min_before_run": 45,
+  "minutes_replayed": 3000,
+  "bars": 6838,
+  "gap_min_before_run": 199,
   "skipped_min": 0,
   "new_trades": 0,
-  "last_bar_art": "2026-11-06 17:42:00 ART",
-  "secs": 7.2,
+  "last_bar_art": "2026-11-06 21:01:00 ART",
+  "secs": 11.2,
   "errors": 0,
-  "gha_run": "42290721956"
+  "gha_run": "42315766796"
  },
  "symbols": [
   "BTCUSDT",
@@ -21,12 +21,12 @@
   "ZECUSDT",
   "XRPUSDT",
   "BNBUSDT",
-  "SOXLBUSDT",
-  "UNIUSDT",
   "SNDKBUSDT",
   "NEARUSDT",
-  "XAUTUSDT",
+  "PEPEUSDT",
   "HYPEUSDT",
+  "SOXLBUSDT",
+  "SPCXBUSDT",
   "UUSDT"
  ],
  "strategies": {

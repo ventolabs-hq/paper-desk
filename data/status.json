@@ -1,17 +1,17 @@
 {
- "updated_art": "2026-11-08 11:13:22 ART",
+ "updated_art": "2026-11-08 13:46:32 ART",
  "last_run": {
-  "run_art": "2026-11-08 11:13:13 ART",
+  "run_art": "2026-11-08 13:46:25 ART",
   "source": "binance",
-  "minutes_replayed": 87,
-  "bars": 1218,
-  "gap_min_before_run": 87,
+  "minutes_replayed": 153,
+  "bars": 2142,
+  "gap_min_before_run": 153,
   "skipped_min": 0,
   "new_trades": 0,
-  "last_bar_art": "2026-11-08 11:12:00 ART",
-  "secs": 8.6,
+  "last_bar_art": "2026-11-08 13:45:00 ART",
+  "secs": 6.9,
   "errors": 0,
-  "gha_run": "42488721352"
+  "gha_run": "42501576276"
  },
  "symbols": [
   "BTCUSDT",

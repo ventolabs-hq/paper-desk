@@ -1,6 +1,6 @@
 # Paper desk status (PAPER ONLY)
 
-Updated: 2026-11-14 17:52:13 ART | source: binance | last closed 1m bar: 2026-11-14 17:51:00 ART | gap before run: 268 min
+Updated: 2026-11-14 21:49:48 ART | source: binance | last closed 1m bar: 2026-11-14 21:48:00 ART | gap before run: 237 min
 
 | strategy | equity $ | realized $ | closed | wins | open |
 |---|---|---|---|---|---|
